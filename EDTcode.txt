@@ -1,0 +1,41 @@
+departments 
+-
+id PK 
+name VARCHAR(30)
+
+employees
+-
+id PK INT 
+birthdate date
+firstname VARCHAR(30)
+lastname  VARCHAR(30)
+gender VARCHAR(1)
+startdate date
+
+departments_employees
+-
+employee_id FK >-< employees.id
+department_id FK >- departments.id
+startdate date 
+enddate date
+
+departments_managers
+-
+employee_id FK >-< employees.id
+department_id FK >- departments.id
+startdate date 
+enddate date
+
+salaries
+-
+employee_id FK >- employees.id
+salary INT
+startdate date
+enddate date
+
+titles
+-
+employee_id FK >-< employees.id
+title VARCHAR(30)
+startdate date
+enddate date
